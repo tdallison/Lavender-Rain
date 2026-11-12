@@ -1,0 +1,12 @@
+#ifndef CMATRIX_CONFIG_H
+#define CMATRIX_CONFIG_H
+#define VERSION "2.0-japanese"
+#define HAVE_NCURSES_H 1
+#define HAVE_GETOPT_H 1
+#define HAVE_SYS_IOCTL_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_TERMIOS_H 1
+#define HAVE_RESIZETERM 1
+#define HAVE_WRESIZE 1
+#define HAVE_USE_DEFAULT_COLORS 1
+#endif
