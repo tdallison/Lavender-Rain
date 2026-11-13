@@ -13,7 +13,13 @@ chmod +x cmatrix-jp
 ./cmatrix-jp -a -b -c -u 10 -C magenta
 ```
 
-The executable also needs the ncurses runtime libraries and a compatible C library (glibc 2.38 or newer). On Ubuntu, install `libncursesw6` and `libtinfo6` if they are missing. For the recommended font, install `fonts-noto-cjk` with your package manager, or use another terminal font that supports half-width katakana. If Noto Sans Mono CJK JP is already installed, there is no need to download it again. A UTF-8 locale and the terminal's terminfo entry are required as well. If your system cannot run the included binary, build from source instead.
+The executable also needs the ncurses runtime libraries and a compatible C library (glibc 2.38 or newer). On Ubuntu, install `libncursesw6` and `libtinfo6` if they are missing. For the recommended font, run:
+
+```sh
+sudo apt install fonts-noto-cjk
+```
+
+If Noto Sans Mono CJK JP is already installed, there is no need to install it again; another terminal font that supports half-width katakana can also work. A UTF-8 locale and the terminal's terminfo entry are required as well. If your system cannot run the included binary, build from source instead.
 
 ## Build and run from source
 
