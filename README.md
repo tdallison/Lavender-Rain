@@ -20,7 +20,9 @@ The program works in a UTF-8 locale and needs a font with half-width katakana. O
 font-family = Noto Sans Mono CJK JP
 ```
 
-Check the installed font with `fc-match 'Noto Sans Mono CJK JP'`. Lavender Rain was developed with Ghostty on Ubuntu Wayland; Ghostty's terminfo must be installed for `TERM=xterm-ghostty`. Terminals that cannot redefine palette colors use their standard magenta instead. The font is installed by Ubuntu's package manager; its files are not bundled in this repository.
+Check the installed font with `fc-match 'Noto Sans Mono CJK JP'`. A copy of the font collection is also included in `fonts/`; to install it for your user without the Ubuntu font package, copy it to `~/.local/share/fonts/` and run `fc-cache -f`. Its licensing information is in `fonts/LICENSE.txt`.
+
+Lavender Rain was developed with Ghostty on Ubuntu Wayland; Ghostty's terminfo must be installed for `TERM=xterm-ghostty`. Terminals that cannot redefine palette colors use their standard magenta instead. The included `cmatrix-jp` binary was built for 64-bit x86 Linux and dynamically links to ncurses; run `make` to rebuild for your own system.
 
 ## The rain
 
