@@ -2,6 +2,22 @@
 
 Slow, soft Matrix-inspired rain for your terminal, in Digital Lavender (`#C4A7E7`). Lavender Rain is a customized, ncurses-based CMatrix derivative with half-width katakana, occasional hexadecimal characters, bright stream heads, and a little sideways glitch.
 
+## Lightweight quickstart
+
+On 64-bit x86 Linux, this downloads only the `cmatrix-jp` binary, saves it under `./lavender-rain/`, and starts the usual lavender rain:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/tdallison/Lavender-Rain/main/quickstart.sh | sh
+```
+
+Pass alternate CMatrix options after the script by downloading it first:
+
+```sh
+curl -fLO https://raw.githubusercontent.com/tdallison/Lavender-Rain/main/quickstart.sh
+chmod +x quickstart.sh
+./quickstart.sh -u 8
+```
+
 ## Lightweight binary-only option
 
 On 64-bit x86 Linux, you can download just the executable instead of cloning the source and bundled font collection:
