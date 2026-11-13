@@ -2,7 +2,20 @@
 
 Slow, soft Matrix-inspired rain for your terminal, in Digital Lavender (`#C4A7E7`). Lavender Rain is a customized, ncurses-based CMatrix derivative with half-width katakana, occasional hexadecimal characters, bright stream heads, and a little sideways glitch.
 
-## Build and run
+## Lightweight binary-only option
+
+On 64-bit x86 Linux, you can download just the executable instead of cloning the source and bundled font collection:
+
+```sh
+mkdir -p lavender-rain && cd lavender-rain
+curl -fL -o cmatrix-jp https://raw.githubusercontent.com/tdallison/Lavender-Rain/main/cmatrix-jp
+chmod +x cmatrix-jp
+./cmatrix-jp -a -b -c -u 10 -C magenta
+```
+
+The executable also needs the ncurses runtime libraries and a compatible C library (glibc 2.38 or newer). On Ubuntu, install `libncursesw6` and `libtinfo6` if they are missing. For the recommended font, install `fonts-noto-cjk` with your package manager, or use another terminal font that supports half-width katakana. If Noto Sans Mono CJK JP is already installed, there is no need to download it again. A UTF-8 locale and the terminal's terminfo entry are required as well. If your system cannot run the included binary, build from source instead.
+
+## Build and run from source
 
 On Ubuntu, install a C compiler, Make, and the wide-character ncurses development library:
 
