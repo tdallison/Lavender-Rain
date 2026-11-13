@@ -7,14 +7,20 @@ Slow, soft Matrix-inspired rain for your terminal, in Digital Lavender (`#C4A7E7
 On Ubuntu, install a C compiler, Make, and the wide-character ncurses development library:
 
 ```sh
-sudo apt install build-essential libncurses-dev
+sudo apt install build-essential libncurses-dev fonts-noto-cjk
 make
 ./run_matrix.sh
 ```
 
 The launcher builds the executable if necessary and runs it with `-a -b -c -u 10 -C magenta`. Pass additional options to override settings, for example `./run_matrix.sh -u 8`. Press `q` to quit or `p` to pause. Number keys adjust the delay while running.
 
-The program works in a UTF-8 locale and needs a font with half-width katakana. It was developed with Ghostty on Ubuntu Wayland; Ghostty's terminfo must be installed for `TERM=xterm-ghostty`. Terminals that cannot redefine palette colors use their standard magenta instead.
+The program works in a UTF-8 locale and needs a font with half-width katakana. On Ubuntu, `fonts-noto-cjk` provides **Noto Sans Mono CJK JP**, the font used for this project. Install the packages above or run `./install_dependencies.sh` on Ubuntu. To use that font in Ghostty, add this to your Ghostty configuration and reload it:
+
+```ini
+font-family = Noto Sans Mono CJK JP
+```
+
+Check the installed font with `fc-match 'Noto Sans Mono CJK JP'`. Lavender Rain was developed with Ghostty on Ubuntu Wayland; Ghostty's terminfo must be installed for `TERM=xterm-ghostty`. Terminals that cannot redefine palette colors use their standard magenta instead. The font is installed by Ubuntu's package manager; its files are not bundled in this repository.
 
 ## The rain
 
